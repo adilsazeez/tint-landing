@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tint</title>
+  <meta name="description" content="A glance interface for Instinct — Instinct publishes; you only look." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wash" aria-hidden="true"></div>
+
+  <main class="split">
+    <article class="essay">
+      <header class="mast">
+        <p class="brand">Tint</p>
+        <p class="lede">I kept scrolling the chat for things I need every day.</p>
+      </header>
+
+      <div class="body">
+        <p>
+          Same facts. Same questions. Scroll up. Ask Instinct again. Wait for the
+          reply. The information was already there — it just lived in a thread that
+          was never meant to be a dashboard.
+        </p>
+        <p>
+          Instinct is meant to be <em>interfaceless</em>. Talk, remember, move on.
+          That works until what you need is something you glance at daily — and
+          typing “send that again” starts to feel like friction you invented for
+          yourself.
+        </p>
+        <p>
+          So I built an interface Instinct did not intend: a Home Screen surface
+          where Instinct can leave short glances, and I only look. Interaction
+          stays with Instinct. The widget only reads.
+        </p>
+
+        <hr class="rule" />
+
+        <p>
+          <strong>Tint</strong> is that surface — the day’s shape of what matters,
+          without turning chat into a place you keep searching.
+        </p>
+
+        <ul class="roles" aria-label="Roles">
+          <li><span>Instinct</span> publishes — curates what shows up, and in a sense uses the system.</li>
+          <li><span>Adil</span> views — connects the agent once, then glances.</li>
+        </ul>
+
+        <p class="end">
+          Built because chat was the wrong place to keep looking for the same day.
+        </p>
+      </div>
+    </article>
+
+    <aside class="visual">
+      <div class="widget-shell" aria-label="Illustrated large glance widget with fictional sample data">
+        <div class="glance">
+          <article class="cell highlight">
+            <span class="shape">Highlight</span>
+            <p class="metric">3</p>
+            <p class="label">days until review</p>
+          </article>
+          <article class="cell status">
+            <span class="shape">Status</span>
+            <div class="ring" aria-hidden="true">
+              <svg viewBox="0 0 36 36">
+                <circle class="track" cx="18" cy="18" r="14" />
+                <circle class="progress" cx="18" cy="18" r="14" />
+              </svg>
+              <span>72%</span>
+            </div>
+            <p class="label">weekly goal</p>
+          </article>
+          <article class="cell routine">
+            <span class="shape">Routine</span>
+            <ul>
+              <li><time>6:30</time> Morning block</li>
+              <li><time>12:00</time> Midday check</li>
+              <li><time>18:00</time> Evening wrap</li>
+            </ul>
+          </article>
+          <article class="cell list">
+            <span class="shape">List</span>
+            <ul>
+              <li>Ship landing draft</li>
+              <li>Review glance slots</li>
+              <li>Confirm pin topics</li>
+            </ul>
+          </article>
+          <article class="cell schedule span">
+            <span class="shape">Schedule</span>
+            <ul>
+              <li><time>Thu</time> Design critique</li>
+              <li><time>Fri</time> API smoke pass</li>
+              <li><time>Mon</time> Opt-in deploy</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- href is a placeholder until App Store / TestFlight URLs exist -->
+      <a class="apple-btn" href="#" aria-disabled="true">
+        <svg class="apple-logo" viewBox="0 0 16 20" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M13.3 10.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1 1-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.1 1.7 2.4 3 2.4 1.2 0 1.6-.8 3.1-.8s1.8.8 3.1.8c1.3 0 2.1-1.1 2.9-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.7-3.9zM10.8 3.7c.6-.8 1.1-1.9.9-3-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.8-.9 2.9 1 .1 2-.5 2.6-1.3z"/>
+        </svg>
+        <span class="apple-copy">
+          <span class="apple-kicker">Download</span>
+          <span class="apple-title">Install for iOS and macOS</span>
+        </span>
+      </a>
+    </aside>
+  </main>
+</body>
+</html>

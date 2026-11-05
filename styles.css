@@ -1,0 +1,384 @@
+:root {
+  --bg: #ededeb;
+  --ink: #111111;
+  --soft: #4a4a48;
+  --hair: #c8c8c4;
+  --font-brand: "Space Grotesk", "Avenir Next", sans-serif;
+  --font-text: "Literata", "Iowan Old Style", "Palatino Linotype", serif;
+  --measure: 34rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  font-optical-sizing: auto;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wash {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, #f2f2f0 0%, var(--bg) 42%, #e6e6e3 100%);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 8vh, 5rem) 1.5rem 4rem;
+  animation: in 0.7s ease-out both;
+  opacity: 1;
+}
+
+.essay {
+  min-width: 0;
+}
+
+.mast {
+  margin-bottom: 2.25rem;
+}
+
+.brand {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-brand);
+  font-size: clamp(1.85rem, 4.5vw, 2.55rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+.lede {
+  margin: 0;
+  max-width: 18em;
+  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.body {
+  max-width: var(--measure);
+}
+
+.body > p {
+  margin: 0 0 1.15rem;
+  color: var(--soft);
+}
+
+.body > p em {
+  color: var(--ink);
+  font-style: italic;
+}
+
+.body > p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.rule {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--hair);
+  width: 3rem;
+}
+
+.roles {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.roles li {
+  margin: 0;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid var(--hair);
+  color: var(--soft);
+  font-size: 1.02rem;
+}
+
+.roles li span {
+  display: inline-block;
+  min-width: 5.25rem;
+  margin-right: 0.55rem;
+  font-family: var(--font-brand);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.end {
+  margin-top: 2.5rem !important;
+  max-width: 22em;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ink) !important;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+/* Generic illustrated glance — fictional samples only (first-draft copy) */
+.widget-shell {
+  width: min(100%, 26rem);
+  padding: 0.7rem;
+  border-radius: 1.35rem;
+  background: #fafaf8;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.1);
+}
+
+.glance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  background: #161616;
+  color: #f2f2f0;
+  min-height: 26rem;
+  font-family: var(--font-brand);
+}
+
+.cell {
+  margin: 0;
+  padding: 0.8rem 0.85rem;
+  border-radius: 0.65rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-height: 0;
+}
+
+.cell.span {
+  grid-column: 1 / -1;
+}
+
+.shape {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+.metric {
+  margin: 0.1rem 0 0;
+  font-size: 2.55rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.label {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.cell ul {
+  list-style: none;
+  margin: 0.15rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.32rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.cell li time {
+  display: inline-block;
+  min-width: 2.55rem;
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.3rem;
+}
+
+.ring {
+  position: relative;
+  width: 4.1rem;
+  height: 4.1rem;
+  margin: 0.1rem 0;
+}
+
+.ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring .track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 3.5;
+}
+
+.ring .progress {
+  fill: none;
+  stroke: #d8d8d4;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-dasharray: 88;
+  stroke-dashoffset: 24.6;
+}
+
+.ring span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.apple-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: min(100%, 17.5rem);
+  padding: 0.7rem 1.15rem 0.75rem 1rem;
+  border-radius: 0.7rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-brand);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.apple-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.apple-btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.apple-logo {
+  width: 1.35rem;
+  height: 1.65rem;
+  flex-shrink: 0;
+}
+
+.apple-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1.15;
+}
+
+.apple-kicker {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.78;
+}
+
+.apple-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@keyframes in {
+  from {
+    opacity: 0.01;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 960px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: start;
+    padding-top: clamp(3rem, 10vh, 5.5rem);
+  }
+
+  .visual {
+    position: sticky;
+    top: 2.5rem;
+    padding-top: 0.35rem;
+  }
+
+  .widget-shell {
+    width: min(100%, 28rem);
+  }
+}
+
+@media (max-width: 959px) {
+  .visual {
+    order: 2;
+  }
+
+  .essay {
+    order: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .roles li span {
+    display: block;
+    margin: 0 0 0.2rem;
+  }
+
+  .apple-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .glance {
+    min-height: 23rem;
+  }
+
+  .metric {
+    font-size: 2.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
